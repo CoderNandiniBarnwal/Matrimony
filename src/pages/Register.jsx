@@ -205,9 +205,10 @@ function Register() {
             <span className="text-[#8b0038]">Privacy Policy</span>
 
             {/* Register Button */}
+            <Link to ="/basicinformation">
             <button className="w-full bg-[#8b0038] text-white py-3 mt-4 rounded-md text-lg transition">
               Register
-            </button>
+            </button></Link>
 
             {/* Login */}
             <p className="text-center text-gray-500 mt-6">

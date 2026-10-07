@@ -11,19 +11,20 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 export default function App() {
   return (
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route element={<Layout />}>
-    //       <Route path="/" element={<Home />} />
-    //       <Route path="/register" element={<Register />} />
-    //       <Route path="/login" element={<Login />} />
-    //       <Route path="/forgotPassword" element={<ForgotPassword />} />
-    //       <Route path="/changePassword" element={<ChangePassword />} />
-    //     </Route>
-    //   </Routes>
-    // </BrowserRouter>
-    <>
-      <ProgressStepper />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/forgotPassword" element={<ForgotPassword />} />
+          <Route path="/changePassword" element={<ChangePassword />} />
+    <Route path="/basicinformation" element=<BasicInformations />/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+    // <>
+    //   <BasicInformations />
+    // </>
   );
 }
