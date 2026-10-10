@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { Link, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function BasicInformations() {
+  const navigate = useNavigate();
+
   const [country, setCountry] = useState("");
   const [state, setState] = useState("");
   const [city, setCity] = useState("");
@@ -311,8 +315,11 @@ function BasicInformations() {
           <div className="mb-5 w-full md:w-1/2">
             <label className="block text-gray-700 mb-1">Total Children</label>
 
-            <select className="w-full border-2 border-gray-300 bg-transparent p-2 outline-none focus:border-[#a87955]"
-            value={totalChildren} onChange={(e)=>setTotalChildren(e.target.value)}>
+            <select
+              className="w-full border-2 border-gray-300 bg-transparent p-2 outline-none focus:border-[#a87955]"
+              value={totalChildren}
+              onChange={(e) => setTotalChildren(e.target.value)}
+            >
               <option value="">Select</option>
               <option value="0">No Children</option>
               <option value="1">1 Child</option>
@@ -485,6 +492,7 @@ function BasicInformations() {
         <div className="flex justify-center mt-6">
           <button
             type="button"
+            onClick={() => navigate("/education")}
             className="bg-[#8b0038] text-white px-8 py-3 rounded-md hover:bg-[#70002d] transition"
           >
             Save & Continue
